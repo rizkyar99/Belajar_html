@@ -6,46 +6,69 @@
     <title>Belajar HTML</title>
 </head>
 <body>
-    <h1>HTML</h1>
-    <img src="logo_html.png" alt="">
-    <a href="about.html">HALAMAN ABOUT</a>
-    <p><b>HyperText Markup Language (HTML)</b> adalah <a href="https://id.wikipedia.org/wiki/HTML">bahasa markah</a> standar untuk dokumen yang dirancang untuk ditampilkan di peramban internet. Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets (CSS) dan bahasa skrip lainnya seperti JavaScript, VBScript, dan PHP.</p>
+    <main>
+        <div>
+            <img src="logo_html.png" alt="">
+            <p>ini logo html</p>
+        </div>
+        
+        <nav>
+            <a href="about.html">HALAMAN ABOUT</a>
+            <a href="index.html">Home</a>
+        </nav>
+
+        <section>
+            <h1>HTML  <sup>&copy;</sup></h1>
+        
+            <p><b>HyperText Markup Language (HTML)</b> adalah <a href="https://id.wikipedia.org/wiki/HTML">bahasa markah</a> standar untuk dokumen yang dirancang untuk ditampilkan di peramban <span>internet.</span> Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets (CSS) dan bahasa skrip lainnya seperti JavaScript, VBScript, dan PHP.</p>
+            <hr>
+            <p>Peramban internet menerima dokumen HTML dari server web atau dari penyimpanan lokal dan membuat dokumen menjadi <br>
+                 halaman web multimedia. HTML menggambarkan struktur halaman web secara semantik dan isyarat awal yang disertakan untuk penampilan dokumen.</p>
+            
+            <h2>Sejarah</h2>
+            <p>
+                Pada tahun 1980 seorang ahli fisika, Tim Berners-Lee <sup><a href="#">[1]</a></sup>, dan juga seorang kontraktor di CERN (Organisasi Eropa untuk Riset Nuklir) mengusulkan dan menyusun ENQUIRE, sebuah sistem untuk ilmuwan CERN dalam membagi dokumen. Sembilan tahun kemudian, Berners-Lee mengusulkan adanya sistem markah berbasis internet.[2] Berners-Lee menspesifikasikan HTML dan menulis jaringan beserta perangkat lunaknya di akhir 1990. Pada tahun yang sama, Berners-Lee dan Robert Cailliau, insinyur sistem data CERN berkolaborasi dalam sebuah permintaan untuk pendanaan, namun tidak diterima secara resmi oleh CERN. Di catatan pribadinya[3] sejak 1990 dia mendaftar[4] "beberapa dari banyak daerah yang menggunakan hypertext" dan pertama-tama menempatkan sebuah ensiklopedia.
+            </p>
+        </section>
+       
+   
+    <article>
+        <h3>Sejarah versi HTML</h3>
+        <h4>24 November 1995</h4>
+        HTML 2.0 dipublikasikan sebagai IETF RFC 1866. Penambahan RFC memperbanyak kemampuan untuk:
+        <ol>
+            <li>November 25, 1995: RFC 1867 (mengunggah file berdasarkan bentuk)
+                <ul>
+                    <li>Sub list 1
+                        <ol>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ol>
+                    </li>
+                    <li>sub list 2</li>
+                    <li>sub list 3</li>
+                </ul>
+            </li>
+            <li>Mei 1996: RFC 1942 (tabel)</li>
+            <li>Agustus 1996: RFC 1980 (peta gambar berbasis klien)</li>
+            <li>Januari 1997: RFC 2070 (internasionalisasi)</li>
+            
+        
+        
+        
+        </ol>
     
-    <p>Peramban internet menerima dokumen HTML dari server web atau dari penyimpanan lokal dan membuat dokumen menjadi halaman web multimedia. HTML menggambarkan struktur halaman web secara semantik dan isyarat awal yang disertakan untuk penampilan dokumen.</p>
-    
-    <h2>Sejarah</h2>
-    <p>
-        Pada tahun 1980 seorang ahli fisika, Tim Berners-Lee, dan juga seorang kontraktor di CERN (Organisasi Eropa untuk Riset Nuklir) mengusulkan dan menyusun ENQUIRE, sebuah sistem untuk ilmuwan CERN dalam membagi dokumen. Sembilan tahun kemudian, Berners-Lee mengusulkan adanya sistem markah berbasis internet.[2] Berners-Lee menspesifikasikan HTML dan menulis jaringan beserta perangkat lunaknya di akhir 1990. Pada tahun yang sama, Berners-Lee dan Robert Cailliau, insinyur sistem data CERN berkolaborasi dalam sebuah permintaan untuk pendanaan, namun tidak diterima secara resmi oleh CERN. Di catatan pribadinya[3] sejak 1990 dia mendaftar[4] "beberapa dari banyak daerah yang menggunakan hypertext" dan pertama-tama menempatkan sebuah ensiklopedia.
-    </p>
+    </article>
+        
+    </main>
+    <footer>
+        copyright &copy; 2024
+    </footer>
+
 </body>
 </html>
-
-<h3>Sejarah versi HTML</h3>
-<h4>24 November 1995</h4>
-HTML 2.0 dipublikasikan sebagai IETF RFC 1866. Penambahan RFC memperbanyak kemampuan untuk:
-<ol>
-    <li>November 25, 1995: RFC 1867 (mengunggah file berdasarkan bentuk)
-        <ul>
-            <li>Sub list 1
-                <ol>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ol>
-            </li>
-            <li>sub list 2</li>
-            <li>sub list 3</li>
-        </ul>
-    </li>
-    <li>Mei 1996: RFC 1942 (tabel)</li>
-    <li>Agustus 1996: RFC 1980 (peta gambar berbasis klien)</li>
-    <li>Januari 1997: RFC 2070 (internasionalisasi)</li>
     
-
-
-
-</ol>
-
 
 
 <!-- NOTE -->
@@ -114,6 +137,59 @@ dengan atribut
 src = source atau sumber gambar
 alt = aternatif jika gambar tidak bisa dimuat maka atribut ini yang berisi tulisan akan dimunculkan 
 
+
+-> Blok div inline span
+
+inline element dimuat diantara elemen lainnya dan ukuran seluas elemenya
+contoh : 
+            <p>
+                ini adalah <span>kalimat</span>
+            </p>
+
+
+blok level element akan dimuat seluas "blok" yang ada biasanya membuat baris baru
+untuk pembungkus blok ini bisanya menggunakan div
+contoh :
+
+<div>
+    <img src="" alt="">
+    <p></p>
+</div>
+
+
+-> ELEMEN LAIN LAIN
+<hr> =  untuk membuat horizintal 
+<br> = untuk menambah baris baru / ngenter
+<sup></sup> = untuk menambahkan karakter diatas seperti pangkat
+<sub></sub> = untuk menambahkan karakter dibawah seperti rumus kimia
+
+
+-> ENTITY CODE
+untuk menuliskan karakter yg tidak ada di keyboard misalnya.
+cara penggunaannya
+1 . dengan ampersand (&) dan diakhiri (;)
+    contoh &copy; untuk simbol copyright
+
+2. dengan kombinasi angka
+    contoh  &#169; untuk simbol copyright
+
+
+-> SEMANTIC MARKUP
+markup yang memiliki makna yang memumemudahkan untuk dibaca strukturnya dan mendukung SEO,
+
+<main></main> = merpersentasikan content di dalam body
+<nav></nav> = unruk meletakkan navigasi / kumpulan link
+<section></section> = untuk menandai bagian 
+<article></article> = untuk merpersentasikan komposisi konten yg independet yg bisa dibauat berulang
+seperti widget yg erderi dari heading paragraph dll.
+<aside></aside> = untuk catata kecil / widget / sidebar dengan nav
+<footer></footer> = bagian bawah web berada di luar main
+
+
+-> TABLE 
+menampilkan kolom seperti di excel,
+
 -->
 
-<img src="" alt="">
+
+

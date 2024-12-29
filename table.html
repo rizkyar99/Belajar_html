@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <table>
+
+        <thead>
+            <tr>
+                <th>NEGARA</th>
+                <th>IBUKOTA</th>
+                <th>POPULASI</th>
+            </tr>
+        </thead>
+        
+    <tbody>
+        <tr>
+            <td>China</td>
+            <td>Beijing</td>
+            <td>20.000.000</td>
+        </tr>
+
+        <tr>
+            <td>Rusia</td>
+            <td>Moskow</td>
+            <td>10.000.000</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>NEGARA</th>
+            <th>IBUKOTA</th>
+            <th>POPULASI</th>
+        </tr>
+    </tfoot>
+    </table>
+
+    <hr>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Tahun</th>
+                <th colspan="3">Morris</th>
+            </tr>
+            <tr>
+                <th>Populasi</th>
+                <th>Nama</th>
+                <th>Lokasi Sekarang</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">7000 SM</td>
+                <td rowspan="3">1000</td>
+                <td>Beidha</td>
+                <td>Yordania</td>
+            </tr>
+            <tr>
+                <td>Beidha</td>
+                <td>Yordania</td>
+            </tr>
+            <tr>
+                <td>Beidha</td>
+                <td>Yordania</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+
+
+
+
+
+ <!-- 
+-> TABLE
+merupakan elemen untuk menampilkan kolom contoh penggunaannya : 
+
+<table> ------ tag table
+    <tr> ------ tag table row
+        <th>NEGARA</th> -------- table heading
+        <th>IBUKOTA</th>
+        <th>POPULASI</th>
+    </tr>
+
+    <tr>
+        <td>China</td> ------tag table data
+        <td>Beijing</td>
+        <td>20.000.000</td>
+    </tr>
+
+    <tr>
+        <td>Rusia</td>
+        <td>Moskow</td>
+        <td>10.000.000</td>
+    </tr> 
+</table>
+
+DALAM TABLE JUGA ADA SEMANTICNYA
+ <thead></thead> = untuk menandakan head / heading table
+ <tbody></tbody> = untuk menandakan body klom biasanya berisi data
+ <tfoot></tfoot> = sama seperti thead namun diletakkan di bawah
+
+jika ditulis dengan semantic 
+
+<table>
+
+        <thead>
+            <tr>
+                <th>NEGARA</th>
+                <th>IBUKOTA</th>
+                <th>POPULASI</th>
+            </tr>
+        </thead>
+        
+    <tbody>
+        <tr>
+            <td>China</td>
+            <td>Beijing</td>
+            <td>20.000.000</td>
+        </tr>
+
+        <tr>
+            <td>Rusia</td>
+            <td>Moskow</td>
+            <td>10.000.000</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>NEGARA</th>
+            <th>IBUKOTA</th>
+            <th>POPULASI</th>
+        </tr>
+    </tfoot>
+    </table>
+
+
+-> COLSPAN DAN ROWSPAN
+jika kita ingin menggabungkan dua beberapa baris atau kolom seperti merge and center
+di di excel maka bisa menggunakan atribut colspan dan rowspan
+
+Colspan =  untuk menggabunkan column
+Rowspan = untuk menggabungkan baris
+
+<table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Tahun</th>
+                <th colspan="3">Morris</th>
+            </tr>
+            <tr>
+                <th>Populasi</th>
+                <th>Nama</th>
+                <th>Lokasi Sekarang</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">7000 SM</td>
+                <td rowspan="3">1000</td>
+                <td>Beidha</td>
+                <td>Yordania</td>
+            </tr>
+            <tr>
+                <td>Beidha</td>
+                <td>Yordania</td>
+            </tr>
+            <tr>
+                <td>Beidha</td>
+                <td>Yordania</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+ -->
+
