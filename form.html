@@ -6,6 +6,41 @@
     <title>Formulir</title>
 </head>
 <body>
+
+    <form action="/daftar" method="get">
+        <button type="button">TOMBOL BIASA</button>
+        <div>
+            <label for="name">Nama</label>
+            <input type="text" placeholder="nama">
+        </div>
+        
+        <div>
+            <label for="email">Email</label>
+            <input type="email" placeholder="email" id="email">
+        </div>
+        <button>JANGAN KIRIM GAIS</button>
+        <div>
+            <label for="password" form="password">Password</label>
+            <input type="password" placeholder="password" id="password">
+        </div>
+        
+
+        <div>
+            <label for="telp">phone</label>
+            <input type="number" placeholder="nomor telepon" id="phone">
+        </div>
+        
+        <!-- <div>
+            <label for="color">color</label>
+            <input type="color" placeholder="color" id="color">
+        </div> -->
+
+        <button>KIRIM</button>
+        <button type="submit">KIRIM 2</button>
+        <input type="submit" value="KIRIM 2 Copy">
+        <input type="button" value="TIDAK KIRIM">
+        
+    </form>
     
 </body>
 </html>
@@ -28,9 +63,52 @@ maka data akan dikirim ke index.php
 - method adalah atribut bagaimana data ini dikirimkan melalui HTTP
 biasanya berupa POST atau GET
 
-tanda ? ini artinya query string 
+tanda ? ini artinya query string
+
+-> TAG INPUT
+dalam tag / elemen form terdapat tag input untuk menginputkan satu masukkan dan bentuknya
+pun beragam Contoh :
+
+<form action="get">
+        <input type="text">
+        <input type="email">
+        <input type="password">
+        <input type="number">
+        <input type="color">
+</form>
+
+->ATRIBUT PLACEHOLDER 
+cara untuk melabeli inputan bisa menggunakan placeholder, yakni suatu suatu penanda dalam
+inptan dan apabila kita ingin mengisi inputan maka placeholer otomatis akan menghilan
+ CONTOH :
+<input type="text" placeholder="nama">
 
 
+->ELEMEN / TAG LABEL
+sama seperti placeholder yakni untuk menandai inputan namun terletak dilar inputan
+Contoh:
+
+<label for="">nama</label>
+<input type="text" name="" id="">
+
+jika diperhatikan dalam elemen label terdapat atribut for, taribut ini sebagai penanda/
+identitas label ini milik siapa, biasanya di hubungkan dengan value atribut id yang sama
 
 
+===============
+
+-> Button
+jika button dibuat di dalam form maka akan berfungsi submit data yg kita inputkan ke
+action yg telah kita tentukan, tidak peduli dimanapun letak button nya ketika terletak didalam
+form maka akan berfungsi mengirimkan data, begitu pula jika type button di isi submit
+
+jika kita ingin membuat tombol dalam form namun tidak berfungsi sebagai data submit
+maka kita bisa menggunakan atribut type pada tag button dan di isikan type="button"
+
+kita juga bisa membuat button dari elemen input yakni dengan menggunakan atribut
+type button. jika atribut input diganti submit maka akan menjadi button untuk submit 
+data. lalu untuk penanda button dapat ditulis di atribut value
+
+last BUTTON
 -->
+
