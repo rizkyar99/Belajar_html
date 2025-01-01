@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="/daftar" method="get">
+    <!-- <form action="/daftar" method="get">
         <button type="button">TOMBOL BIASA</button>
         <div>
             <label for="name">Nama</label>
@@ -29,17 +29,87 @@
             <label for="telp">phone</label>
             <input type="number" placeholder="nomor telepon" id="phone">
         </div>
-        
+         -->
         <!-- <div>
             <label for="color">color</label>
             <input type="color" placeholder="color" id="color">
         </div> -->
 
-        <button>KIRIM</button>
+        <!-- <button>KIRIM</button>
         <button type="submit">KIRIM 2</button>
         <input type="submit" value="KIRIM 2 Copy">
         <input type="button" value="TIDAK KIRIM">
         
+    </form> -->
+
+    <form action="/daftar" method="POST">
+
+        <div>
+            <label for="name">Nama</label>
+            <input type="text" placeholder="nama" name="name">
+        </div>
+        
+        <div>
+            <label for="email">Email</label>
+            <input type="email" placeholder="email" id="email" name="email">
+        </div>
+       
+        <div>
+            <label for="password" form="password">Password</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </div>
+        
+        <div>
+            <label for="telp">phone</label>
+            <input type="number" placeholder="nomor telepon" id="phone" name="phone">
+        </div>
+
+        <button>KIRIM</button>
+
+    </form>
+    
+    <hr>
+
+    <form action="/order">
+        
+        <div>
+            <label for="baju">BAJU</label>
+            <input type="radio" name="baju" id="" value="kaos" checked><label for="">kaos</label>
+            <input type="radio" name="baju" id="" value="kemeja"><label for="">kemeja</label>
+        </div>
+        
+        <div>
+            <label for="ukuran">Ukuran</label>
+            <select name="ukuran" id="Ukuran">
+                <option>-</option>
+                <option value="s">small</option>
+                <option value="m" selected>medium</option>
+                <option value="l">large</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="term">Sesuai Pesanan</label>
+            <input type="checkbox" name="term" id="term" value="benar" checked>
+        </div>
+
+        <div>
+            <label for="notes">Catatan</label>
+            <textarea name="notes" id="notes" cols="20" rows="5"></textarea>
+        </div>
+        <button>ORDER</button>
+
+    </form>
+    
+
+    <hr>
+
+    <h1>VALDASI</h1>
+    
+    <form action="/valid">
+        <input type="text" name="input" required minlength="3" maxlength="5">
+        <input type="number" name="number" min="2" max="5">
+        <button type="submit">Kirim</button>
     </form>
     
 </body>
@@ -109,6 +179,101 @@ kita juga bisa membuat button dari elemen input yakni dengan menggunakan atribut
 type button. jika atribut input diganti submit maka akan menjadi button untuk submit 
 data. lalu untuk penanda button dapat ditulis di atribut value
 
-last BUTTON
+
+-> ATRIBUT NAME pad element input
+berguna memebrikan informasi pada user, misal pada inputan name, ketika user input
+suatu, maka dengan atribut name ini user bisa menetahui bahwa nilai inputan name ini dan 
+inputan ini milik form mana
+
+contoh :
+<label for="name">Nama</label>
+<input type="text" placeholder="nama" name="name">
+
+maka di url bar akan muncul :
+file:///D:/daftar?name=bejo&email=bejo%40mail.com&password=123&phone=0899
+
+- %40 ADALAH URL-ENCODE CODE DARI @
+
+method get = data dari form terlihat di url bar
+method post = data dari from tidak terlihat namun bisa di lihat di inspek elemen network
+
+
+
+
+->ELEMEN INPUT RADIO BUTTON
+salah satu elemen atau tag input adalah radio button, diujukan untuk pilihan gabda
+contoh :
+
+ <form action="order">
+        
+        <label for="">BAJU</label>
+        <input type="radio" name="baju" id="" value="kaos"><label for="">kaos</label>
+        <input type="radio" name="baju" id="" value="kemeja"><label for="">kemeja</label>
+        <button>ORDER</button>
+
+  </form>
+  penjelasan :
+    atribut name perlu di isi agar pilihan dapat di isi satu saja
+    atribut values berfungsi memberikan nilai value pada inputan misal kita pilih kemeja:
+    file:///D:/Kelas_fullstack/html/order?baju=kemeja
+    jika kita ingin memilih salah satu pilihan scara default maka bisa menggunakan atribut checked
+
+
+->ELEMENT INPUT SELECTED / DROPDOWN MENU
+merupakan element input yang berbentuk dropdown penggunaanya seperti radio button :
+
+<label for="ukuran">Ukuran</label>
+            <select name="ukuran" id="Ukuran">
+                <option>-</option>
+                <option value="s">small</option>
+                <option value="m" selected>medium</option>
+                <option value="l">large</option>
+            </select>
+penjelesan :
+seperti biasa for, name, id dibuat sama
+menu dropdown di taruh di tag option, nilai yg yampil di url yakni ada di atribut value
+lalu jika ingin ada pilihan yang otomatis terpilih biasa menggunakan selected
+
+
+->INPUT ELEMENT CHECKBOX
+sangat mirip seperti radio button
+
+        <div>
+            <label for="term">Sesuai Pesanan</label>
+            <input type="checkbox" name="term" id="term" checked>
+        </div>
+penjelasan :
+seperi biasa for, name, id dibuat sama
+jika ingin otomatis tercheck maka bisa menggunakan checked
+
+-> INPUT ELEMENT TEXTAREA
+meruapakan element input yang dapat menangkap banyak inputan dan bisa beberapa baris:
+
+        <div>
+            <label for="notes">Catatan</label>
+            <textarea name="notes" id="notes" cols="20" rows="5"></textarea>
+        </div>
+penjelasan :
+
+adanya atribut cols = panjang inputan atau kotaknya
+atribut rows = banyaknya baris jika lebih dari nilai rows maka akan keluar scroll
+
+
+-> VALIDASI INPUT
+
+     <form action="/valid">
+        <input type="text" name="input" required minlength="3" maxlength="5">
+        <input type="number" name="number" min="2" max="5">
+        <button type="submit">Kirim</button>
+    </form>
+penjelasan : 
+
+validasi adalah aturan atau rule yg bisa kita buat untuk inputan misal kita harus mengisi inputan
+dengan panjang yg telah ditetapkan
+misal untuk karakter bisa menggunakan required artinya harus di isi
+lalu minlength adalah minimal karakter dan maxlength adalah maximalkarakter
+
+sedangkan untukinputan number menginakan min adalah angka mulai minimal
+dan max adalah angka maximal
 -->
 
